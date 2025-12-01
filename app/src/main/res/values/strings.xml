@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DZ2API</string>
+    <string name="giphy_api_key">5rP5TNDO03bZz9TpaVmEb1av2AY3ty30</string>
+    <string name="error_start">Ошибка загрузки стартовой страницы</string>
+    <string name="error_page">Ошибка загрузки следующей страницы</string>
+    <string name="retry">Повторить</string>
+    <string name="toast_gif">Вы кликнули по GIF №%1$d</string>
 </resources>

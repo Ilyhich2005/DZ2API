@@ -6,9 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.dz2api"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.dz2api"
@@ -18,6 +16,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField(
+            "String",
+            "GIPHY_API_KEY",
+            "\"${project.properties["GIPHY_API_KEY"]}\""
+        )
     }
 
     buildTypes {
@@ -38,7 +42,7 @@ android {
     }
     buildFeatures {
         compose = true
-        viewBinding =true
+        buildConfig = true
     }
 }
 

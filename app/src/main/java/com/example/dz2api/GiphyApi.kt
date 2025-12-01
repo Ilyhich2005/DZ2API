@@ -7,6 +7,8 @@ interface GiphyApi {
 
     @GET("v1/gifs/random")
     suspend fun getRandomGif(
-        @Query("api_key") apiKey: String
+        @Query("api_key") apiKey: String,
+        @Query("tag") tag: String = "",
+        @Query("rating") rating: String = "g"
     ): RandomGifResponse
 }
