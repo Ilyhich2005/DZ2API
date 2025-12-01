@@ -14,7 +14,7 @@ import kotlinx.coroutines.delay
 
 
 class GifViewModel : ViewModel() {
-    val apiKey = com.example.dz2api.BuildConfig.GIPHY_API_KEY
+    val apiKey = BuildConfig.GIPHY_API_KEY
 
     val gifUrl = mutableStateListOf<String>()
     var isLoading by mutableStateOf(false)
@@ -44,7 +44,7 @@ class GifViewModel : ViewModel() {
                         tag = "",
                         rating = "g"
                     )
-                    response.data?.images?.original?.url?.let { gifUrl.add(it) }
+                    response.data.images.original.url.let { gifUrl.add(it) }
                 }
             }catch (e: Exception) {
                 e.printStackTrace()
@@ -69,7 +69,7 @@ class GifViewModel : ViewModel() {
                         tag = "",
                         rating = "g"
                     )
-                    response.data?.images?.original?.url?.let { gifUrl.add(it) }
+                    response.data.images.original.url.let { gifUrl.add(it) }
                 }
 
                 currentPage++
