@@ -29,11 +29,8 @@ class MainActivity : ComponentActivity() {
     private val viewModel: GifViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContent {
-            MaterialTheme {
-                GifScreen(viewModel)
-            }
+            GifScreen(viewModel)
         }
     }
 }
